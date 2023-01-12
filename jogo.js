@@ -25,15 +25,14 @@ function posicaoRandomica() {
 
     //criar o elemento html
 
-    var mosca = document.createElement('img')
-    mosca.src = 'imagens/mosca.png'
-    mosca.className = tamanhoAleatorio()
-    mosca.style.left = posicaoX + 'px'
-    mosca.style.top = posicaoY + 'px'
-    mosca.style.position = 'absolute'
+    var mosquito = document.createElement('img')
+    mosquito.src = 'imagens/mosca.png'
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
+    mosquito.style.left = posicaoX + 'px'
+    mosquito.style.top = posicaoY + 'px'
+    mosquito.style.position = 'absolute'
 
-    document.body.appendChild(mosca)
-
+    document.body.appendChild(mosquito)
 }
 
 function tamanhoAleatorio() {
@@ -42,12 +41,27 @@ function tamanhoAleatorio() {
 
     switch(classe) {
         case 0:
-            return 'mosca1'
+            return 'mosquito1'
 
         case 1:
-            return 'mosca2'
+            return 'mosquito2'
 
         case 2:
-            return 'mosca3'
+            return 'mosquito3'
     }
+}
+
+function ladoAleatorio() {
+    var classe = Math.floor(Math.random() * 2)
+    console.log(classe)
+
+    switch(classe) {
+        case 0:
+            return 'ladoA'
+
+        case 1:
+            return 'ladoB'
+
+    }
+
 }
