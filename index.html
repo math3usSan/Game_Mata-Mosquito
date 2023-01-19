@@ -17,12 +17,13 @@
             <img id="v3" src="imagens/coracao_cheio.png">
         </div>
 
-        <div class="cronometro">Tempo Restante: </div>
+        <div class="cronometro">Tempo Restante: <span id="cronometro"></span></div>
     </div>
     
     <script>
+        document.getElementById('cronometro').innerHTML = tempo
 
-        setInterval(
+        var criaMosca = setInterval(
             function() {posicaoRandomica()}, 1000
         )
     
