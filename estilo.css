@@ -1,9 +1,13 @@
+html {
+    cursor: url(imagens/mata_mosca.png) 30 30, auto;
+}
+
 body {
     background-image: url(imagens/bg.jpg);
     background-size: cover;
 }
 
-.painel{
+.painel {
     width: 150px;
 
     padding: 10px;
